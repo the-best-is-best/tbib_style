@@ -6,6 +6,9 @@ You can use the package to control your font easily.
 
 you can control your font with google font package
 
+# tutorial
+[youtube]https://youtu.be/P1eAeWMCgxM
+
 # default style should use in desktop
 
 property | description
@@ -76,7 +79,7 @@ b2       | fontSize: 16, fontWeight: FontWeight.w400, height: 1.2
 
 
 #  if change font size or fontWeight and used responsive font size
-
+ 
 ```dart
 /*
  that code mean when width screen > 1200 h1 will be font size 20
@@ -87,12 +90,13 @@ b2       | fontSize: 16, fontWeight: FontWeight.w400, height: 1.2
        // or remove default style
        TBIBFontStyle.h1 = TextStyle(fontSize: 20);
          // when use useCastomFontSize is mean use any h1 to h6 changed
-       TBIBFontStyle.fontResponsive(width,useCastomFontSize: yes);
+       TBIBFontStyle.fontResponsive(width,useCastomFontSize: true);
     }
 ```
+if make useCastomFontSize true you should use hotRestart not reload sorry for this issues
 
 # you can use GoogleFont flutter package like this 
-
+  
 ```dart
       /*
   that mean h2 font family is aBeeZee from GoogleFont Package 
