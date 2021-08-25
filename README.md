@@ -61,7 +61,7 @@ when use TBIBFontStyle.lisenGoogleFont(
     TBIBFontStyle.fontResponsive(width );
 ```
 
-# default style should use in mobile or tablet width < 1200 
+# when use TBIBFontStyle.fontResponsive in mobile or tablet width < 1200 
 
 property | description
 -------- |------------
