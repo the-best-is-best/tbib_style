@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:tbib_style/style/font_style.dart';
-import 'package:tbib_style/tbib_style.dart';
 
 void main() {
   // use font google in h1 and h1Dark
