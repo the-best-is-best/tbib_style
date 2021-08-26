@@ -1,6 +1,6 @@
 name: tbib_style
 description: A Package for flutter you can control your font like bootstrap 5 with google font.
-version: 0.0.7
+version: 0.0.8
 homepage: https://github.com/the-best-is-best/tbib_style
 
 environment:
