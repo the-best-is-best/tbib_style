@@ -71,26 +71,7 @@ when use Pacakge google font use it in first code then edit your style
 
 ```
 
-# You can use responsive font size  TBIBFontStyle.fontResponsive(width ); deprecated
-
-```dart
-    /*
-    that mean use font responsive with default style library in mobile 
-    */
-    double width = MediaQuery.of(context).size.width;
-    TBIBFontStyle.fontResponsive(width );
-```
-
-# You can use responsive font size deprecated
-
-```dart
-    /*
-    that mean use font responsive with default style library in mobile 
-    */
-    double width = MediaQuery.of(context).size.width;
-   
-
-# when use TBIBFontStyle.fontResponsive in mobile or tablet width < 1200  default
+# when use responsive font size in screen < 1200  default
 
 property | description
 -------- |------------
@@ -103,21 +84,6 @@ h6       | fontSize: 16, height: 1.2
 b1       | fontSize: 20, fontWeight: FontWeight.w500, height: 1.2
 b2       | fontSize: 16, fontWeight: FontWeight.w400, height: 1.2
 
- 
-```dart
-/*
- that code mean when width screen > 1200 h1 will be font size 20
-*/
- double width = MediaQuery.of(context).size.width;
-   if(width < 1200){
-       TBIBFontStyle.h1=TBIBFontStyle.h1.copyWith(fontSize:20); 
-       // or remove default style
-       TBIBFontStyle.h1 = TextStyle(fontSize: 20);
-         // when use useCastomFontSize is mean use any h1 to h6 changed
-       TBIBFontStyle.fontResponsive(width,useCastomFontSize: true); // deprecated
-    }
-```
-if make useCastomFontSize true you should use hotRestart not reload sorry for this issues
 
 # you can use GoogleFont flutter package like this 
   
@@ -153,3 +119,39 @@ if make useCastomFontSize true you should use hotRestart not reload sorry for th
         style: isDark ? TBIBFontStyle.h3Dark : TBIBFontStyle.h3,
     ),
 ```
+
+## this is deprecated and not working properly 
+# You can use responsive font size  TBIBFontStyle.fontResponsive(width ); deprecated
+
+```dart
+    /*
+    that mean use font responsive with default style library in mobile 
+    */
+    double width = MediaQuery.of(context).size.width;
+    TBIBFontStyle.fontResponsive(width );
+```
+
+# You can use responsive font size deprecated
+
+```dart
+    /*
+    that mean use font responsive with default style library in mobile 
+    */
+    double width = MediaQuery.of(context).size.width;
+   
+```
+ 
+```dart
+/*
+ that code mean when width screen > 1200 h1 will be font size 20
+*/
+ double width = MediaQuery.of(context).size.width;
+   if(width < 1200){
+       TBIBFontStyle.h1=TBIBFontStyle.h1.copyWith(fontSize:20); 
+       // or remove default style
+       TBIBFontStyle.h1 = TextStyle(fontSize: 20);
+         // when use useCastomFontSize is mean use any h1 to h6 changed
+       TBIBFontStyle.fontResponsive(width,useCastomFontSize: true); // deprecated
+    }
+
+if make useCastomFontSize true you should use hotRestart not reload sorry for this issues
