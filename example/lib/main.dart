@@ -51,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
 // responsive font in screen > 1200 will be font size like bootstrap
 // in < 1200 will be calc font like bootstrap
     TBIBFontStyle.responsiveFontSize(width);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
