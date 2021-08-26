@@ -17,20 +17,40 @@ class TBIBFontStyle {
   static TextStyle b2 =
       TextStyle(fontSize: 16, fontWeight: FontWeight.w400, height: 1.2);
 
-  static TextStyle h1Dark =
-      TextStyle(fontSize: 40, fontWeight: FontWeight.bold, height: 1.2);
-  static TextStyle h2Dark =
-      TextStyle(fontSize: 32, fontWeight: FontWeight.w600, height: 1.2);
-  static TextStyle h3Dark =
-      TextStyle(fontSize: 28, fontWeight: FontWeight.w600, height: 1.2);
-  static TextStyle h4Dark =
-      TextStyle(fontSize: 24, fontWeight: FontWeight.w500, height: 1.2);
-  static TextStyle h5Dark = TextStyle(fontSize: 20, height: 1.2);
-  static TextStyle h6Dark = TextStyle(fontSize: 16, height: 1.2);
-  static TextStyle b1Dark =
-      TextStyle(fontSize: 20, fontWeight: FontWeight.w500, height: 1.2);
-  static TextStyle b2Dark =
-      TextStyle(fontSize: 16, fontWeight: FontWeight.w400, height: 1.2);
+  static TextStyle h1Dark = TextStyle(
+      fontSize: 40,
+      fontWeight: FontWeight.bold,
+      height: 1.2,
+      color: Colors.white);
+  static TextStyle h2Dark = TextStyle(
+      fontSize: 32,
+      fontWeight: FontWeight.w600,
+      height: 1.2,
+      color: Colors.white);
+  static TextStyle h3Dark = TextStyle(
+      fontSize: 28,
+      fontWeight: FontWeight.w600,
+      height: 1.2,
+      color: Colors.white);
+  static TextStyle h4Dark = TextStyle(
+      fontSize: 24,
+      fontWeight: FontWeight.w500,
+      height: 1.2,
+      color: Colors.white);
+  static TextStyle h5Dark =
+      TextStyle(fontSize: 20, height: 1.2, color: Colors.white);
+  static TextStyle h6Dark =
+      TextStyle(fontSize: 16, height: 1.2, color: Colors.white);
+  static TextStyle b1Dark = TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w500,
+      height: 1.2,
+      color: Colors.white);
+  static TextStyle b2Dark = TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+      height: 1.2,
+      color: Colors.white);
 
   static defaultFlutterStyle() {
     h1 = TextStyle(fontSize: 96, fontWeight: FontWeight.w200, height: -1.5);
@@ -46,31 +66,43 @@ class TBIBFontStyle {
       case 1:
         {
           h1Dark = h1 = googleFontsName;
+          h1Dark = h1Dark.copyWith(color: Colors.white);
           return;
         }
       case 2:
         {
           h2Dark = h2 = googleFontsName;
+          h2Dark = h2Dark.copyWith(color: Colors.white);
           return;
         }
       case 3:
         {
           h3Dark = h3 = googleFontsName;
+          h3Dark = h3Dark.copyWith(color: Colors.white);
+
           return;
         }
       case 4:
         {
           h4Dark = h4 = googleFontsName;
+          h4Dark = h4Dark.copyWith(color: Colors.white);
+
           return;
         }
       case 5:
         {
           h5Dark = h5 = b1 = b1Dark = googleFontsName;
+          h5Dark = h5Dark.copyWith(color: Colors.white);
+          b1Dark = b1Dark.copyWith(color: Colors.white);
+
           return;
         }
       case 6:
         {
           h6 = h6Dark = b2 = b2Dark = googleFontsName;
+          h6Dark = h6Dark.copyWith(color: Colors.white);
+          b2 = b2.copyWith(color: Colors.white);
+
           return;
         }
       default:
@@ -80,6 +112,7 @@ class TBIBFontStyle {
     }
   }
 
+  @Deprecated("Use responsiveFontSize instead. it is deprecated in 0.0.6")
   static void fontResponsive(double screenWidth,
       {bool useCastomFontSize = false}) {
     if (!useCastomFontSize) {
@@ -143,6 +176,41 @@ class TBIBFontStyle {
         h4Dark = h4Dark.copyWith(
             fontSize: h4.fontSize!, fontWeight: FontWeight.w500);
       }
+    }
+  }
+
+  static void responsiveFontSize(double screenWidth,
+      {double h1Size = 22,
+      double h1SizePc = 40,
+      double h2Size = 21.2,
+      double h2SizePc = 32,
+      double h3Size = 20.8,
+      double h3SizePc = 28,
+      double h4Size = 20.4,
+      double h4SizePc = 24}) {
+    if (screenWidth < 1200) {
+      h1 = h1.copyWith(fontSize: h1Size + ((1.5 * screenWidth) / 100));
+      h1Dark = h1Dark.copyWith(fontSize: h1Size + ((1.5 * screenWidth) / 100));
+
+      h2 = h2.copyWith(fontSize: h2Size + ((.9 * screenWidth) / 100));
+      h2Dark = h2Dark.copyWith(fontSize: h2Size + ((.9 * screenWidth) / 100));
+
+      h3 = h3.copyWith(fontSize: h3Size + ((.6 * screenWidth) / 100));
+      h3Dark = h3Dark.copyWith(fontSize: h3Size + ((.6 * screenWidth) / 100));
+      h4 = h4.copyWith(fontSize: h4Size + ((.3 * screenWidth) / 100));
+      h4Dark = h4Dark.copyWith(fontSize: h4Size + ((.3 * screenWidth) / 100));
+    } else {
+      h1 = h1.copyWith(fontSize: h1SizePc + ((1.5 * screenWidth) / 100));
+      h1Dark =
+          h1Dark.copyWith(fontSize: h1SizePc + ((1.5 * screenWidth) / 100));
+
+      h2 = h2.copyWith(fontSize: h2SizePc + ((.9 * screenWidth) / 100));
+      h2Dark = h2Dark.copyWith(fontSize: h2SizePc + ((.9 * screenWidth) / 100));
+
+      h3 = h3.copyWith(fontSize: h3SizePc + ((.6 * screenWidth) / 100));
+      h3Dark = h3Dark.copyWith(fontSize: h3SizePc + ((.6 * screenWidth) / 100));
+      h4 = h4.copyWith(fontSize: h4SizePc + ((.3 * screenWidth) / 100));
+      h4Dark = h4Dark.copyWith(fontSize: h4SizePc + ((.3 * screenWidth) / 100));
     }
   }
 

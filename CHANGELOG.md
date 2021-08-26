@@ -13,3 +13,7 @@
 ## 0.0.5
 
 * add video and solve some problems -- and change example code.
+
+## 0.0.6
+
+* Solve font responsive issues with new function and make dark font color white default
