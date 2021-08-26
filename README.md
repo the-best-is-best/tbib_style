@@ -59,6 +59,17 @@ when use Pacakge google font use it in first code then edit your style
   TBIBFontStyle.h3Dark = TBIBFontStyle.h3Dark.copyWith(color: Colors.white);
 
 ```
+# You can use responsive font size  in 0.0.6 or above
+
+```dart
+  double width = MediaQuery.of(context).size.width;
+     TBIBFontStyle.responsiveFontSize(width);
+     // or use that and make h1 and h1Dark in screen < 1200
+     TBIBFontStyle.responsiveFontSize(width ,h1Size: 20,);
+     //or use that to make h1 in screen >= 1200 50 px and < 1200 will be 20
+     TBIBFontStyle.responsiveFontSize(width ,h1Size: 20, h1SizePc: 50);
+
+```
 
 # You can use responsive font size  TBIBFontStyle.fontResponsive(width ); deprecated
 
@@ -70,7 +81,7 @@ when use Pacakge google font use it in first code then edit your style
     TBIBFontStyle.fontResponsive(width );
 ```
 
-# You can use responsive font size 0.0.6
+# You can use responsive font size deprecated
 
 ```dart
     /*
@@ -92,8 +103,6 @@ h6       | fontSize: 16, height: 1.2
 b1       | fontSize: 20, fontWeight: FontWeight.w500, height: 1.2
 b2       | fontSize: 16, fontWeight: FontWeight.w400, height: 1.2
 
-
-#  if change font size or fontWeight and used responsive font size
  
 ```dart
 /*
