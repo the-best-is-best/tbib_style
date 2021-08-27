@@ -7,7 +7,7 @@ You can use the package to control your font easily.
 you can control your font with google font package
 
 # tutorial
-[youtube] https://youtu.be/P1eAeWMCgxM
+* [`Youtube`]( https://youtu.be/P1eAeWMCgxM)
 
 # default style should use in desktop
 
