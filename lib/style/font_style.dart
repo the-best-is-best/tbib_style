@@ -61,54 +61,76 @@ class TBIBFontStyle {
     h6 = TextStyle(fontSize: 20, fontWeight: FontWeight.w500, height: .15);
   }
 
-  static lisenGoogleFont(TextStyle googleFontsName, int h) {
-    switch (h) {
-      case 1:
-        {
-          h1Dark = h1 = googleFontsName;
-          h1Dark = h1Dark.copyWith(color: Colors.white);
-          return;
-        }
-      case 2:
-        {
-          h2Dark = h2 = googleFontsName;
-          h2Dark = h2Dark.copyWith(color: Colors.white);
-          return;
-        }
-      case 3:
-        {
-          h3Dark = h3 = googleFontsName;
-          h3Dark = h3Dark.copyWith(color: Colors.white);
+  static lisenGoogleFont(TextStyle googleFontsName, {int? h}) {
+    if (h != null) {
+      switch (h) {
+        case 1:
+          {
+            h1Dark = h1 = googleFontsName;
+            h1Dark = h1Dark.copyWith(color: Colors.white);
+            return;
+          }
+        case 2:
+          {
+            h2Dark = h2 = googleFontsName;
+            h2Dark = h2Dark.copyWith(color: Colors.white);
+            return;
+          }
+        case 3:
+          {
+            h3Dark = h3 = googleFontsName;
+            h3Dark = h3Dark.copyWith(color: Colors.white);
 
-          return;
-        }
-      case 4:
-        {
-          h4Dark = h4 = googleFontsName;
-          h4Dark = h4Dark.copyWith(color: Colors.white);
+            return;
+          }
+        case 4:
+          {
+            h4Dark = h4 = googleFontsName;
+            h4Dark = h4Dark.copyWith(color: Colors.white);
 
-          return;
-        }
-      case 5:
-        {
-          h5Dark = h5 = b1 = b1Dark = googleFontsName;
-          h5Dark = h5Dark.copyWith(color: Colors.white);
-          b1Dark = b1Dark.copyWith(color: Colors.white);
+            return;
+          }
+        case 5:
+          {
+            h5Dark = h5 = b1 = b1Dark = googleFontsName;
+            h5Dark = h5Dark.copyWith(color: Colors.white);
+            b1Dark = b1Dark.copyWith(color: Colors.white);
 
-          return;
-        }
-      case 6:
-        {
-          h6 = h6Dark = b2 = b2Dark = googleFontsName;
-          h6Dark = h6Dark.copyWith(color: Colors.white);
-          b2 = b2.copyWith(color: Colors.white);
+            return;
+          }
+        case 6:
+          {
+            h6 = h6Dark = b2 = b2Dark = googleFontsName;
+            h6Dark = h6Dark.copyWith(color: Colors.white);
+            b2Dark = b2Dark.copyWith(color: Colors.white);
 
-          return;
-        }
-      default:
-        {
-          return null;
-        }
+            return;
+          }
+        default:
+          {
+            return null;
+          }
+      }
+    } else {
+      h1Dark = h1 = googleFontsName;
+      h1Dark = h1Dark.copyWith(color: Colors.white);
+
+      h2Dark = h2 = googleFontsName;
+      h2Dark = h2Dark.copyWith(color: Colors.white);
+
+      h3Dark = h3 = googleFontsName;
+      h3Dark = h3Dark.copyWith(color: Colors.white);
+
+      h4Dark = h4 = googleFontsName;
+      h4Dark = h4Dark.copyWith(color: Colors.white);
+
+      h5Dark = h5 = b1 = b1Dark = googleFontsName;
+      h5Dark = h5Dark.copyWith(color: Colors.white);
+      b1Dark = b1Dark.copyWith(color: Colors.white);
+
+      h6 = h6Dark = b2 = b2Dark = googleFontsName;
+      h6Dark = h6Dark.copyWith(color: Colors.white);
+      b2Dark = b2Dark.copyWith(color: Colors.white);
     }
   }
 

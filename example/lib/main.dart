@@ -5,7 +5,8 @@ import 'package:tbib_style/style/font_style.dart';
 void main() {
   // use font google in h1 and h1Dark
   TBIBFontStyle.lisenGoogleFont(
-      GoogleFonts.aBeeZee(textStyle: TBIBFontStyle.h2), 2);
+      GoogleFonts.aBeeZee(textStyle: TBIBFontStyle.h2),
+      h: 2);
 
   // use custom font in h1 only
 

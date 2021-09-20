@@ -26,6 +26,10 @@ b2       | fontSize: 16, fontWeight: FontWeight.w400, height: 1.2
 
 # important information
 
+in this version can use lisenGoogleFont without choose h number
+
+ TBIBFontStyle.lisenGoogleFont(GoogleFonts.roboto());
+
 when use TBIBFontStyle.lisenGoogleFont(
       GoogleFonts.aBeeZee(textStyle: TBIBFontStyle.h2), 2);
 
@@ -89,8 +93,14 @@ b2       | fontSize: 16, fontWeight: FontWeight.w400, height: 1.2
   
 ```dart
       /*
-  that mean h2 font family is aBeeZee from GoogleFont Package 
       */
+// in all h number font family is roboto from GoogleFont Package 
+
+       TBIBFontStyle.lisenGoogleFont(GoogleFonts.roboto());
+
+
+         that mean h2 font family is aBeeZee from GoogleFont Package 
+
     TBIBFontStyle.lisenGoogleFont(
       GoogleFonts.aBeeZee(textStyle: TBIBFontStyle.h2), 2);
 ```
