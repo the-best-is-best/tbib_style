@@ -112,23 +112,23 @@ class TBIBFontStyle {
           }
       }
     } else {
-      h1Dark = h1 = googleFontsName;
+      h1Dark = h1 = googleFontsName.copyWith(fontSize: 40, fontWeight: FontWeight.bold, height: 1.2);
       h1Dark = h1Dark.copyWith(color: Colors.white);
 
-      h2Dark = h2 = googleFontsName;
+      h2Dark = h2 = googleFontsName.copyWith(fontSize: 32, fontWeight: FontWeight.w600, height: 1.2);
       h2Dark = h2Dark.copyWith(color: Colors.white);
 
-      h3Dark = h3 = googleFontsName;
+      h3Dark = h3 = googleFontsName.copyWith(fontSize: 28, fontWeight: FontWeight.w600, height: 1.2);
       h3Dark = h3Dark.copyWith(color: Colors.white);
 
-      h4Dark = h4 = googleFontsName;
+      h4Dark = h4 = googleFontsName.copyWith(fontSize: 24, fontWeight: FontWeight.w500, height: 1.2);
       h4Dark = h4Dark.copyWith(color: Colors.white);
 
-      h5Dark = h5 = b1 = b1Dark = googleFontsName;
+      h5Dark = h5 = b1 = b1Dark = googleFontsName.copyWith(fontSize: 20, height: 1.2);
       h5Dark = h5Dark.copyWith(color: Colors.white);
       b1Dark = b1Dark.copyWith(color: Colors.white);
 
-      h6 = h6Dark = b2 = b2Dark = googleFontsName;
+      h6 = h6Dark = b2 = b2Dark = googleFontsName.copyWith(fontSize: 16, height: 1.2);
       h6Dark = h6Dark.copyWith(color: Colors.white);
       b2Dark = b2Dark.copyWith(color: Colors.white);
     }

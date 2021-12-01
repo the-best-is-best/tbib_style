@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tbib_style/style/font_style.dart';
@@ -5,8 +7,10 @@ import 'package:tbib_style/style/font_style.dart';
 void main() {
   // use font google in h1 and h1Dark
   TBIBFontStyle.lisenGoogleFont(
-      GoogleFonts.aBeeZee(textStyle: TBIBFontStyle.h2),
-      h: 2);
+      GoogleFonts.aBeeZee(),
+      );
+
+      log(TBIBFontStyle.h2.fontSize.toString());
 
   // use custom font in h1 only
 
