@@ -7,10 +7,10 @@ import 'package:tbib_style/style/font_style.dart';
 void main() {
   // use font google in h1 and h1Dark
   TBIBFontStyle.lisenGoogleFont(
-      GoogleFonts.aBeeZee(),
-      );
+    GoogleFonts.aBeeZee(),
+  );
 
-      log(TBIBFontStyle.h2.fontSize.toString());
+  log(TBIBFontStyle.h2.fontSize.toString());
 
   // use custom font in h1 only
 
@@ -19,10 +19,12 @@ void main() {
   // use custom font in h3 and h3Dark only
   TBIBFontStyle.addCustomFont("BerthaMelanie", 3);
 
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(
+      home: const MyHomePage(
         title: "FontStyle Example",
       ),
     );
@@ -40,7 +42,7 @@ class App extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -67,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   isDark = !isDark;
                 });
               },
-              icon: Icon(Icons.brightness_4))
+              icon: const Icon(Icons.brightness_4))
         ],
       ),
       body: Container(
@@ -80,14 +82,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   "Text custom font",
                   style: isDark ? TBIBFontStyle.h1Dark : TBIBFontStyle.h1,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text(
                   "Text color mode",
                   style: isDark ? TBIBFontStyle.h2Dark : TBIBFontStyle.h2,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text(
