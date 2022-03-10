@@ -1,6 +1,8 @@
+## 1.0.1
+* now solve font style default removed when use google font
 ## 1.0.0
- solve b2 color in dark mode 
- and now you can handle all h with google font
+* solve b2 color in dark mode 
+  and now you can handle all h with google font
 ## 0.0.6 - 0.0.7 - 0.0.8
 
 * Solve font responsive issues with new function and make dark font color white default

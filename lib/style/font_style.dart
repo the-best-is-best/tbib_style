@@ -53,12 +53,30 @@ class TBIBFontStyle {
       color: Colors.white);
 
   static defaultFlutterStyle() {
-    h1 = TextStyle(fontSize: 96, fontWeight: FontWeight.w200, height: -1.5);
-    h2 = TextStyle(fontSize: 60, fontWeight: FontWeight.w200, height: -.5);
+    h1 = TextStyle(
+      fontSize: 96,
+      fontWeight: FontWeight.w200,
+    );
+    h2 = TextStyle(
+      fontSize: 60,
+      fontWeight: FontWeight.w200,
+    );
     h3 = TextStyle(fontSize: 48, fontWeight: FontWeight.w300);
-    h4 = TextStyle(fontSize: 34, fontWeight: FontWeight.w300, height: .25);
+    h4 = TextStyle(
+      fontSize: 34,
+      fontWeight: FontWeight.w300,
+    );
     h5 = TextStyle(fontSize: 24, fontWeight: FontWeight.w300);
-    h6 = TextStyle(fontSize: 20, fontWeight: FontWeight.w500, height: .15);
+    h6 = TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w500,
+    );
+    b1 = TextStyle(
+      fontSize: 34,
+    );
+    b2 = TextStyle(
+      fontSize: 20,
+    );
   }
 
   static lisenGoogleFont(TextStyle googleFontsName, {int? h}) {
@@ -112,23 +130,29 @@ class TBIBFontStyle {
           }
       }
     } else {
-      h1Dark = h1 = googleFontsName.copyWith(fontSize: 40, fontWeight: FontWeight.bold, height: 1.2);
+      h1Dark = h1 = googleFontsName.copyWith(
+          fontSize: 40, fontWeight: FontWeight.bold, height: 1.2);
       h1Dark = h1Dark.copyWith(color: Colors.white);
 
-      h2Dark = h2 = googleFontsName.copyWith(fontSize: 32, fontWeight: FontWeight.w600, height: 1.2);
+      h2Dark = h2 = googleFontsName.copyWith(
+          fontSize: 32, fontWeight: FontWeight.w600, height: 1.2);
       h2Dark = h2Dark.copyWith(color: Colors.white);
 
-      h3Dark = h3 = googleFontsName.copyWith(fontSize: 28, fontWeight: FontWeight.w600, height: 1.2);
+      h3Dark = h3 = googleFontsName.copyWith(
+          fontSize: 28, fontWeight: FontWeight.w600, height: 1.2);
       h3Dark = h3Dark.copyWith(color: Colors.white);
 
-      h4Dark = h4 = googleFontsName.copyWith(fontSize: 24, fontWeight: FontWeight.w500, height: 1.2);
+      h4Dark = h4 = googleFontsName.copyWith(
+          fontSize: 24, fontWeight: FontWeight.w500, height: 1.2);
       h4Dark = h4Dark.copyWith(color: Colors.white);
 
-      h5Dark = h5 = b1 = b1Dark = googleFontsName.copyWith(fontSize: 20, height: 1.2);
+      h5Dark = h5 =
+          b1 = b1Dark = googleFontsName.copyWith(fontSize: 20, height: 1.2);
       h5Dark = h5Dark.copyWith(color: Colors.white);
       b1Dark = b1Dark.copyWith(color: Colors.white);
 
-      h6 = h6Dark = b2 = b2Dark = googleFontsName.copyWith(fontSize: 16, height: 1.2);
+      h6 = h6Dark =
+          b2 = b2Dark = googleFontsName.copyWith(fontSize: 16, height: 1.2);
       h6Dark = h6Dark.copyWith(color: Colors.white);
       b2Dark = b2Dark.copyWith(color: Colors.white);
     }

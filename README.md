@@ -28,7 +28,7 @@ b2       | fontSize: 16, fontWeight: FontWeight.w400, height: 1.2
 
 in this version can use lisenGoogleFont without choose h number
 
- TBIBFontStyle.lisenGoogleFont(GoogleFonts.roboto());
+ TBIBFontStyle.lisenGoogleFont(GoogleFonts.roboto()); // solved in v 1.0.1
 
 when use TBIBFontStyle.lisenGoogleFont(
       GoogleFonts.aBeeZee(textStyle: TBIBFontStyle.h2), 2);
