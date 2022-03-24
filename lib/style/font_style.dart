@@ -71,12 +71,8 @@ class TBIBFontStyle {
       fontSize: 20,
       fontWeight: FontWeight.w500,
     );
-    b1 = TextStyle(
-      fontSize: 34,
-    );
-    b2 = TextStyle(
-      fontSize: 20,
-    );
+    b1 = TextStyle(fontSize: 34, fontWeight: FontWeight.w500);
+    b2 = TextStyle(fontSize: 20, fontWeight: FontWeight.w400);
   }
 
   static lisenGoogleFont(TextStyle googleFontsName, {int? h}) {
@@ -235,16 +231,18 @@ class TBIBFontStyle {
       double h4Size = 20.4,
       double h4SizePc = 24}) {
     if (screenWidth < 1200) {
-      h1 = h1.copyWith(fontSize: h1Size + ((1.5 * screenWidth) / 100));
-      h1Dark = h1Dark.copyWith(fontSize: h1Size + ((1.5 * screenWidth) / 100));
+      h1 = h1.copyWith(fontSize: h1Size - ((.9 * screenWidth) / 100));
+      h1Dark = h1Dark.copyWith(fontSize: h1Size - ((.9 * screenWidth) / 100));
 
-      h2 = h2.copyWith(fontSize: h2Size + ((.9 * screenWidth) / 100));
-      h2Dark = h2Dark.copyWith(fontSize: h2Size + ((.9 * screenWidth) / 100));
+      h2 = h2.copyWith(fontSize: h2Size - ((.9 * screenWidth) / 100));
+      h2Dark = h2Dark.copyWith(fontSize: h2Size - ((.9 * screenWidth) / 100));
 
-      h3 = h3.copyWith(fontSize: h3Size + ((.6 * screenWidth) / 100));
-      h3Dark = h3Dark.copyWith(fontSize: h3Size + ((.6 * screenWidth) / 100));
-      h4 = h4.copyWith(fontSize: h4Size + ((.3 * screenWidth) / 100));
-      h4Dark = h4Dark.copyWith(fontSize: h4Size + ((.3 * screenWidth) / 100));
+      b1 = h3 = h3.copyWith(fontSize: h3Size - ((.9 * screenWidth) / 100));
+      b1Dark = h3Dark =
+          h3Dark.copyWith(fontSize: h3Size - ((.9 * screenWidth) / 100));
+      b2 = h4 = h4.copyWith(fontSize: h4Size - ((.9 * screenWidth) / 100));
+      b2Dark = h4Dark =
+          h4Dark.copyWith(fontSize: h4Size - ((.9 * screenWidth) / 100));
     } else {
       h1 = h1.copyWith(fontSize: h1SizePc + ((1.5 * screenWidth) / 100));
       h1Dark =
@@ -253,60 +251,79 @@ class TBIBFontStyle {
       h2 = h2.copyWith(fontSize: h2SizePc + ((.9 * screenWidth) / 100));
       h2Dark = h2Dark.copyWith(fontSize: h2SizePc + ((.9 * screenWidth) / 100));
 
-      h3 = h3.copyWith(fontSize: h3SizePc + ((.6 * screenWidth) / 100));
-      h3Dark = h3Dark.copyWith(fontSize: h3SizePc + ((.6 * screenWidth) / 100));
-      h4 = h4.copyWith(fontSize: h4SizePc + ((.3 * screenWidth) / 100));
-      h4Dark = h4Dark.copyWith(fontSize: h4SizePc + ((.3 * screenWidth) / 100));
+      b1 = h3 = h3.copyWith(fontSize: h3SizePc + ((.6 * screenWidth) / 100));
+      b1Dark = h3Dark =
+          h3Dark.copyWith(fontSize: h3SizePc + ((.6 * screenWidth) / 100));
+      b2 = h4 = h4.copyWith(fontSize: h4SizePc + ((.3 * screenWidth) / 100));
+      b2Dark = h4Dark =
+          h4Dark.copyWith(fontSize: h4SizePc + ((.3 * screenWidth) / 100));
     }
   }
 
-  static void addCustomFont(String yourFontFamily, int h) {
-    switch (h) {
-      case 1:
-        {
-          h1 = h1.copyWith(fontFamily: yourFontFamily);
-          h1Dark = h1Dark.copyWith(fontFamily: yourFontFamily);
+  static void addCustomFont(String yourFontFamily, int? h) {
+    if (h != null) {
+      switch (h) {
+        case 1:
+          {
+            h1 = h1.copyWith(fontFamily: yourFontFamily);
+            h1Dark = h1Dark.copyWith(fontFamily: yourFontFamily);
 
-          return;
-        }
-      case 2:
-        {
-          h2 = h2.copyWith(fontFamily: yourFontFamily);
-          h2Dark = h2Dark.copyWith(fontFamily: yourFontFamily);
-          return;
-        }
-      case 3:
-        {
-          h3 = h3.copyWith(fontFamily: yourFontFamily);
-          h3Dark = h3Dark.copyWith(fontFamily: yourFontFamily);
-          return;
-        }
-      case 4:
-        {
-          h4 = h4.copyWith(fontFamily: yourFontFamily);
-          h4Dark = h4Dark.copyWith(fontFamily: yourFontFamily);
-          return;
-        }
-      case 5:
-        {
-          h5 = h5.copyWith(fontFamily: yourFontFamily);
-          h5Dark = h5Dark.copyWith(fontFamily: yourFontFamily);
-          b1 = b1.copyWith(fontFamily: yourFontFamily);
-          b1Dark = b1Dark.copyWith(fontFamily: yourFontFamily);
-          return;
-        }
-      case 6:
-        {
-          h6 = h6.copyWith(fontFamily: yourFontFamily);
-          h6Dark = h6Dark.copyWith(fontFamily: yourFontFamily);
-          b2 = b2.copyWith(fontFamily: yourFontFamily);
-          b2Dark = b2Dark.copyWith(fontFamily: yourFontFamily);
-          return;
-        }
-      default:
-        {
-          return null;
-        }
+            break;
+          }
+        case 2:
+          {
+            h2 = h2.copyWith(fontFamily: yourFontFamily);
+            h2Dark = h2Dark.copyWith(fontFamily: yourFontFamily);
+            break;
+          }
+        case 3:
+          {
+            h3 = h3.copyWith(fontFamily: yourFontFamily);
+            h3Dark = h3Dark.copyWith(fontFamily: yourFontFamily);
+            break;
+          }
+        case 4:
+          {
+            h4 = h4.copyWith(fontFamily: yourFontFamily);
+            h4Dark = h4Dark.copyWith(fontFamily: yourFontFamily);
+            break;
+          }
+        case 5:
+          {
+            h5 = h5.copyWith(fontFamily: yourFontFamily);
+            h5Dark = h5Dark.copyWith(fontFamily: yourFontFamily);
+            b1 = b1.copyWith(fontFamily: yourFontFamily);
+            b1Dark = b1Dark.copyWith(fontFamily: yourFontFamily);
+            break;
+          }
+        case 6:
+          {
+            h6 = h6.copyWith(fontFamily: yourFontFamily);
+            h6Dark = h6Dark.copyWith(fontFamily: yourFontFamily);
+            b2 = b2.copyWith(fontFamily: yourFontFamily);
+            b2Dark = b2Dark.copyWith(fontFamily: yourFontFamily);
+            break;
+          }
+        default:
+          {
+            break;
+          }
+      }
+    } else {
+      h1 = h1.copyWith(fontFamily: yourFontFamily);
+      h1Dark = h1Dark.copyWith(fontFamily: yourFontFamily);
+      h2 = h2.copyWith(fontFamily: yourFontFamily);
+      h2Dark = h2Dark.copyWith(fontFamily: yourFontFamily);
+      h3 = h3.copyWith(fontFamily: yourFontFamily);
+      h3Dark = h3Dark.copyWith(fontFamily: yourFontFamily);
+      h4 = h4.copyWith(fontFamily: yourFontFamily);
+      h4Dark = h4Dark.copyWith(fontFamily: yourFontFamily);
+      h5 = h5.copyWith(fontFamily: yourFontFamily);
+      h5Dark = h5Dark.copyWith(fontFamily: yourFontFamily);
+      h6 = h6.copyWith(fontFamily: yourFontFamily);
+      h6Dark = h6Dark.copyWith(fontFamily: yourFontFamily);
+      b2 = b2.copyWith(fontFamily: yourFontFamily);
+      b2Dark = b2Dark.copyWith(fontFamily: yourFontFamily);
     }
   }
 }
