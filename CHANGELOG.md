@@ -1,3 +1,5 @@
+## 2
+ now can use class ResponiveFont and  use it with flutter_screenutil
 ## 1.0.1
 * now solve font style default removed when use google font
 ## 1.0.0

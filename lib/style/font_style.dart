@@ -1,21 +1,40 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class TBIBFontStyle {
-  static TextStyle h1 =
-      TextStyle(fontSize: 40, fontWeight: FontWeight.bold, height: 1.2);
-  static TextStyle h2 =
-      TextStyle(fontSize: 32, fontWeight: FontWeight.w600, height: 1.2);
-  static TextStyle h3 =
-      TextStyle(fontSize: 28, fontWeight: FontWeight.w600, height: 1.2);
-  static TextStyle h4 =
-      TextStyle(fontSize: 24, fontWeight: FontWeight.w500, height: 1.2);
-  static TextStyle h5 = TextStyle(fontSize: 20, height: 1.2);
-  static TextStyle h6 = TextStyle(fontSize: 16, height: 1.2);
-  static TextStyle b1 =
-      TextStyle(fontSize: 20, fontWeight: FontWeight.w500, height: 1.2);
-  static TextStyle b2 =
-      TextStyle(fontSize: 16, fontWeight: FontWeight.w400, height: 1.2);
+  static TextStyle h1 = TextStyle(
+      fontSize: 40,
+      fontWeight: FontWeight.bold,
+      height: 1.2,
+      color: Colors.black);
+  static TextStyle h2 = TextStyle(
+      fontSize: 32,
+      fontWeight: FontWeight.w600,
+      height: 1.2,
+      color: Colors.black);
+  static TextStyle h3 = TextStyle(
+      fontSize: 28,
+      fontWeight: FontWeight.w600,
+      height: 1.2,
+      color: Colors.black);
+  static TextStyle h4 = TextStyle(
+      fontSize: 24,
+      fontWeight: FontWeight.w500,
+      height: 1.2,
+      color: Colors.black);
+  static TextStyle h5 =
+      TextStyle(fontSize: 20, height: 1.2, color: Colors.black);
+  static TextStyle h6 =
+      TextStyle(fontSize: 16, height: 1.2, color: Colors.black);
+  static TextStyle b1 = TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w500,
+      height: 1.2,
+      color: Colors.black);
+  static TextStyle b2 = TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+      height: 1.2,
+      color: Colors.black);
 
   static TextStyle h1Dark = TextStyle(
       fontSize: 40,
@@ -322,6 +341,8 @@ class TBIBFontStyle {
       h5Dark = h5Dark.copyWith(fontFamily: yourFontFamily);
       h6 = h6.copyWith(fontFamily: yourFontFamily);
       h6Dark = h6Dark.copyWith(fontFamily: yourFontFamily);
+      b1 = b1.copyWith(fontFamily: yourFontFamily);
+      b1Dark = b1Dark.copyWith(fontFamily: yourFontFamily);
       b2 = b2.copyWith(fontFamily: yourFontFamily);
       b2Dark = b2Dark.copyWith(fontFamily: yourFontFamily);
     }

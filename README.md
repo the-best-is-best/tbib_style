@@ -129,6 +129,28 @@ b2       | fontSize: 16, fontWeight: FontWeight.w400, height: 1.2
         style: isDark ? TBIBFontStyle.h3Dark : TBIBFontStyle.h3,
     ),
 ```
+## now use ResponsFont class with flutter_screenutil like that 
+
+
+## this is deprecated and not working properly 
+# You can use responsive font size  TBIBFontStyle.fontResponsive(width ); deprecated
+
+```dart
+        MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Choose Two Squares',
+        builder: (context, child) {
+            ScreenUtil.setContext(context);
+
+            ResponiveFont.responsive();
+            BotToastInit();
+
+            child = child; //do something
+            child = botToastBuilder(context, child);
+            return child;
+        },
+            ...
+```
 
 ## this is deprecated and not working properly 
 # You can use responsive font size  TBIBFontStyle.fontResponsive(width ); deprecated
