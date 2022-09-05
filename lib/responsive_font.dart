@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'tbib_style.dart';
@@ -7,6 +10,7 @@ class ResponiveFont {
 
   static void responsive() {
     if (!_responsiveEnabled) {
+      log("message");
       TBIBFontStyle.h1 =
           TBIBFontStyle.h1.copyWith(fontSize: TBIBFontStyle.h1.fontSize!.sp);
       TBIBFontStyle.h1Dark = TBIBFontStyle.h1Dark
